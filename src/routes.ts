@@ -35,6 +35,7 @@ const vegatzzaPizza: Pizza = {
 }
 
 const allToppings: string[] = ['Banana Peppers', 'Black Olives','Goat Cheese', 'Ham', 'Onions', 'Pepperoni', 'Pineapple' ];
+const allPizza = [pepperoniPizza, fruityMeatsPizza, vegatzzaPizza];
 
 
 
@@ -43,9 +44,8 @@ const allToppings: string[] = ['Banana Peppers', 'Black Olives','Goat Cheese', '
 
 routes.get('/', (req,res) => {
     res.render('homepage', {
-        pepperoniPizza: pepperoniPizza,
-        fruityMeatsPizza: fruityMeatsPizza,
-        vegatzzaPizza: vegatzzaPizza
+        // pizza: allPizza,
+        // vegatzzaPizza: vegatzzaPizza
     });
 })
 
