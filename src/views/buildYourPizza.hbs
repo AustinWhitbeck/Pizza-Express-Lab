@@ -1,0 +1,26 @@
+<h3>Build your own Pizza</h3>
+
+<form action="submit">
+
+    <label for="pizzaSize">Size</label>
+    <select name="pizzaSize" id="pizzaSize">
+        <option value="smallPizza">Small</option>
+        <option value="mediumPizza">Medium</option>
+        <option value="largePizza">Large</option>
+    </select>
+    <label for="toppingsNumber">Toppings</label>
+    <input type="number" name="toppingsNumber" id="toppingsNumber">
+    <ul>
+        {{!-- for reach loop for each topping we have --}}
+        {{#each allToppings}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul>
+
+    <input type="radio" name="glutenFree" id="glutenFree">
+    <label for="glutenFree">Gluten-Free Crust? (2.00 extra</label>
+
+
+
+
+</form>
