@@ -2,16 +2,29 @@
 
 <h3>Leave a Review</h3>
 
-<form action="submit">
+<form type="submit" action="/reviewConfirmation">
 <label for="yourName">Your Name:</label>
 <input type="text" name="yourName" id="yourName" placeholder="Type your name!">
 
-<p>Comment</p>
-<input type="text" name="yourComment" id="yourComment" placeholder="Leave your comments here.">
+{{!-- Commment Div --}}
+<div>
+    <label for="yourComment">Comment</label>
+    <input type="text" name="yourComment" id="yourComment" placeholder="Leave your comments here.">
+</div>
 
+{{!-- rating scale div --}}
 <p>Rating</p>
-{{!-- radio with 5 4 3 2 1 --}}
-
+<div>
+    <input type="radio" name="ratingScale" id="rating5">
+    <label for="rating5">5 <strong>(best rating)</strong></label>
+    <input type="radio" name="ratingScale" id="rating4">
+    <label for="rating5">4 </label>
+    <input type="radio" name="ratingScale" id="rating3">
+    <label for="rating5">3 </label>
+    <input type="radio" name="ratingScale" id="rating2">
+    <label for="rating5">2 </label>
+    <input type="radio" name="ratingScale" id="rating1">
+    <label for="rating5">1 (worst)</label>
 <div>
 <button>Submit</button>
 <a href="/">Never Mind</a>

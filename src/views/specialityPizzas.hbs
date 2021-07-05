@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/styles.css">
+{{#if pizza}}
+<h3>Speciality Pizza: {{pizza.name}}</h3>
+<p>Name: {{pizza.name}}</p>
+<p>Price: {{pizza.price}}</p>
+<p>Toppings: {{pizza.toppings}}</p>
+{{!-- <ul>
+    {{#each pizza.toppings}}
+    <li>{{this.toppings}}</li>
+    {{/each}}
+</ul> --}}
+{{/if}}
+
+<a href="/">Back to Homepage</a>

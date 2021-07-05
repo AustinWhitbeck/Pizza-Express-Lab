@@ -44,8 +44,10 @@ const allPizza = [pepperoniPizza, fruityMeatsPizza, vegatzzaPizza];
 
 routes.get('/', (req,res) => {
     res.render('homepage', {
-        // pizza: allPizza,
-        // vegatzzaPizza: vegatzzaPizza
+        pizza: allPizza,
+        // vegatzzaPizza: vegatzzaPizza,
+        // pepperoniPizza: pepperoniPizza,
+        // fruityMeatsPizza: fruityMeatsPizza
     });
 })
 
@@ -57,6 +59,19 @@ routes.get('/buildYourPizza', (req,res) => {
     res.render('buildYourPizza', {
         allToppings: allToppings
     });
+})
+
+routes.get('/specialityPizzas', (req, res) => {
+    let chosenPizza = allPizza.find((pizza) => {
+        return pizza.name === String(req.query.name);
+    })
+    res.render('specialityPizzas', {
+        pizza: chosenPizza
+    });
+})
+
+routes.get('/reviewConfirmaton', (req, res) => {
+    res.render('reviewConfirmation');
 })
 
 export default routes;
