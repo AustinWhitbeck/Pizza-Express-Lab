@@ -1,1 +1,9 @@
+<link rel="stylesheet" href="/styles.css">
+
 <h3>Thanks for the review!</h3>
+{{#if reviewInfo}}
+<p>Comment: {{reviewInfo.comment}}</p>
+<p>Review Score: {{reviewInfo.score}}</p>
+{{/if}}
+
+<a href="/">Back to Homepage</a>

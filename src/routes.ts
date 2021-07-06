@@ -70,8 +70,19 @@ routes.get('/specialityPizzas', (req, res) => {
     });
 })
 
-routes.get('/reviewConfirmaton', (req, res) => {
-    res.render('reviewConfirmation');
+routes.post('/reviewConfirmation', (req, res) => {
+    const comment = req.body.yourComment;
+    const reviewScore = req.body.ratingScale;
+
+
+    const reviewInfo = {
+        comment: comment,
+        score: reviewScore
+
+    }
+    res.render('reviewConfirmation', {
+        reviewInfo: reviewInfo,
+    });
 })
 
 export default routes;
