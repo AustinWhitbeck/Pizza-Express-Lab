@@ -1,7 +1,86 @@
 body {
     font-family:sans-serif;
+    background-color: #E28E72;
+    margin: 0;
 }
 
-.pizza-pals {
-    width: 400px;
+a {
+    text-decoration: none;
+    color: #F3D76B;
+    text-align: center;
+    margin: 5px;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: #E28E72;
 }
+
+ul {
+    list-style: none;
+    margin: 10px;
+    padding: 5px;
+}
+
+li {
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+}
+/* homepage css */
+
+.hp-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 50px 0;
+}
+.main-title {
+    text-align: center;
+    margin: 30px 0;
+    color: #74322A;
+    background-color: #F3D76B;
+    padding: 20px;
+}
+
+.pizza-pals-container {
+    display: flex;
+    justify-content: center;
+}
+.pizza-pals-img {
+    width: 400px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #61452C;
+    border-width: 4px;
+}
+
+.hp-main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px;
+}
+
+.homepage-sections {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 200px;
+    width: 300px;
+    border-style: solid;
+    border-color: #61452C;
+    border-radius: 10px;
+    background-color: #F5DCBA;
+}
+
+.hp-section-titles {
+    text-align: center;
+    color: #A66629 ;
+}
+
+.hp-footer {
+    margin: 60px 0 0 0;
+    text-align: center;
+    color: #74322A;
+}
+

@@ -1,24 +1,31 @@
 <link rel="stylesheet" href="/styles.css">
 
-<h1>What is up my dudes? Time to Pizza on Pal.</h1>
+<div class="hp-header">
+    <h1 class="main-title">What is up my DUDES!?!? Time to Pizza on Pal.</h1>
+    <div class="pizza-pals-container">
+    <img src="/PizzaPals.jpg" alt="Pizza Pals" class="pizza-pals-img">
+    </div>
+</div>
 
-<img src="/PizzaPals.jpg" alt="Pizza Pals" class="pizza-pals">
+<main class="hp-main-content">
+    <section class="homepage-sections">
+        <h3 class="hp-section-titles">The Galax-ayyyyy's Best 'Za</h3>
+            <ul>
+                {{#each pizza}}
+                    <li><a href="/specialityPizzas?name={{this.name}}">{{this.name}}</a></li>
+                {{/each}}
+            </ul>
+    </section>
 
-<h3>The Galax-ayyyyy's Best 'Za</h3>
-    <ul>
-        {{#each pizza}}
-            <li><a href="/specialityPizzas?name={{this.name}}">{{this.name}}</a></li>
-        {{/each}}
-    </ul>
-    {{!-- <ul>
-    <li><a href="/specialityPizzas">{{vegatzzaPizza.name}}</a></li>
-    </ul> --}}
+    <section class="homepage-sections">
+        <h3 class="hp-section-titles">Make your own, Bro</h3>
+        <a href="/buildYourPizza"> Build your own!</a>
+    </section>
 
+    <section class="homepage-sections">
+        <h3 class="hp-section-titles">Like, tell us how it was my Dude.</h3>
+        <a href="/reviews">Click here to leave a review</a>
+    </section>
+</main>
+<footer class="hp-footer">Thanks for checkin' us out Bud! ;)</footer>
 
-<h3>Make your own, Bro</h3>
-<a href="/buildYourPizza"> Build your own!</a>
-
-<h3>Like, tell us how it was my Dude.</h3>
-<a href="/reviews">Click here to leave a review</a>
-
-{{!-- pizza image --}}
