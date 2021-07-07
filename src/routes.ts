@@ -85,4 +85,58 @@ routes.post('/reviewConfirmation', (req, res) => {
     });
 })
 
+routes.post('/yourCustomPizza', (req, res) => {
+    const size = req.body.pizzaSize;
+    const toppings = req.body.toppingsNumber;
+    const glutenFree = req.body.glutenFree;
+    const specialInstructions = req.body.specialInstructions;
+
+
+    let glutenChoice = {
+        choice: '',
+        price: 0
+    }
+    
+    if (glutenFree) {
+        glutenChoice = {
+            choice: 'Yes',
+            price: 2
+        }
+    } else {
+        glutenChoice = {
+            choice: 'No',
+            price: 0
+        }
+    }
+
+    let price = 0;
+
+    // if the value of the pizzaSize radio is small, medium or large, then add the following together
+    // create a value for the price of the object and use the variable for the rq.body as the variable to multiply off of.
+    if (size === 'Small') {
+        let toppingsPrice = toppings * .5;
+        price = 7 + toppingsPrice + glutenChoice.price;
+    } else if(size === 'Medium') {
+        let toppingsPrice = toppings * 1;
+        price = 10 + toppingsPrice + glutenChoice.price;
+    } else {
+        let toppingsPrice = toppings * 1.25;
+        price = 12 + toppingsPrice + glutenChoice.price;
+    }
+
+    const customPizza = {
+        size: size,
+        toppings: toppings,
+        gluten: glutenChoice,
+        special: specialInstructions,
+        price: price
+    }
+
+    res.render('yourCustomPizza', {
+        customPizza: customPizza,
+    })
+    
+  
+})
+
 export default routes;

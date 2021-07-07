@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/styles.css">
+
+<h3>Nice Custom Pizza Nabroleon!</h3>
+{{#if customPizza}}
+<p>Size: {{customPizza.size}}</p>
+<p>Toppings: {{customPizza.toppings}}</p>
+<p>Gluten-Free Crust: {{customPizza.gluten.choice}}</p>
+<p>Special Instructions: {{customPizza.special}}</p>
+<p>Price: ${{customPizza.price}}</p>
+{{/if}}
+
+{{!-- another or back to homepage footer --}}
+<footer>
+    <a href="/buildYourPizza">Build another pizza</a>
+    <a href="/">Back to Homepage</a>
+</footer>
+
+
+
